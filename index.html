@@ -40,7 +40,6 @@
     <a href="#menu">Menu</a>
     <a href="#about">About</a>
     <a href="#sear">The Sear</a>
-    <a href="#build">The Build</a>
     <a href="#visit">Visit</a>
   </nav>
   <button class="nav__order" id="orderBtn" aria-label="Your order">
@@ -50,7 +49,7 @@
 </header>
 
 <div class="mnav" id="mnav" aria-hidden="true">
-  <a href="#menu">Menu</a><a href="#about">About</a><a href="#sear">The Sear</a><a href="#build">The Build</a><a href="#visit">Visit</a>
+  <a href="#menu">Menu</a><a href="#about">About</a><a href="#sear">The Sear</a><a href="#visit">Visit</a>
   <p>214 Mercer Lane · New York<br>Open daily 11 AM – 1 AM</p>
 </div>
 
@@ -60,6 +59,7 @@
 <section class="film" id="film" aria-label="A walk to Ember & Bun">
   <div class="film__stage">
     <canvas class="film__canvas" id="filmCanvas" aria-hidden="true"></canvas>
+    <div class="film__tint"></div>
     <div class="film__scrim"></div>
 
     <div class="beat beat--intro" data-beat="0">
@@ -89,91 +89,7 @@
     </div>
     <h2 class="beat beat--big beat--c" data-beat="5"><span class="line"><span>THIS IS THE PART</span></span><span class="line"><span>WE DON'T RUSH.</span></span></h2>
 
-    <ol class="film__chapters" aria-hidden="true">
-      <li>Rooftops</li><li>Mercer Lane</li><li>The door</li><li>The griddle</li><li>The burger</li>
-      <i class="film__progress"><b id="filmProgress"></b></i>
-    </ol>
-  </div>
-</section>
-
-<!-- ============ ABOUT ============ -->
-<section class="about" id="about">
-  <div class="about__head">
-    <p class="eyebrow">Ember &amp; Bun · Est. 2019</p>
-    <h2 class="display display--shadow reveal-lines"><span class="line"><span>A CORNER,</span></span><span class="line"><span>NOT A CHAIN.</span></span></h2>
-    <div class="about__side">
-      <h3 class="serif">Slow food, fast city.</h3>
-      <p>A corner room on Mercer Lane with tall windows, an open griddle and a fryer that only drops when you order. Beef ground every morning, potatoes cut by hand, sauces made in-house. Stay for one burger or the whole afternoon.</p>
-    </div>
-  </div>
-
-  <div class="collage">
-    <figure class="collage__item c1" data-speed="-0.12"><img src="assets/img/interior.webp" alt="Sunlit dining room with walnut tables and brass lamps" loading="lazy" decoding="async" width="1400" height="788"></figure>
-    <figure class="collage__item c2" data-speed="0.10"><img src="assets/img/g1.webp" alt="Chef forming fresh beef balls in the morning" loading="lazy" decoding="async" width="900" height="1125"></figure>
-    <figure class="collage__item c3" data-speed="-0.06"><img src="assets/img/detail.webp" alt="House sauces, fries and a burger on the marble counter" loading="lazy" decoding="async" width="1100" height="733"></figure>
-    <figure class="collage__item c4" data-speed="0.16"><img src="assets/img/smash.webp" alt="Patty being smashed on the griddle" loading="lazy" decoding="async" width="1200" height="675"></figure>
-    <svg class="doodle" viewBox="0 0 240 220" aria-hidden="true">
-      <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M28 96c0-44 40-70 92-70s92 26 92 70z"/>
-        <path d="M70 52l6-4M110 42l7 1M150 48l6 4M92 66l6-3M136 64l6 2"/>
-        <path d="M22 112c18 10 34-6 50 4s30-6 48 2 30-8 48 0 30-6 50 2"/>
-        <path d="M24 122h192c6 0 10 6 6 12-4 8-14 10-22 10H40c-8 0-18-2-22-10-4-6 0-12 6-12z"/>
-        <path d="M30 152c40 8 140 8 180 0"/>
-        <path d="M30 160h180c0 22-30 36-90 36s-90-14-90-36z"/>
-        <path d="M100 18c-6-8 4-12-2-20M124 16c-6-8 4-12-2-20M148 20c-6-8 4-12-2-20"/>
-      </g>
-    </svg>
-  </div>
-</section>
-
-<div class="marquee" aria-hidden="true">
-  <div class="marquee__track" data-marquee>
-    <span>Smashed to order</span><i>✦</i><span>Hand-cut fries</span><i>✦</i><span>Thick shakes</span><i>✦</i><span>Open till 1 AM</span><i>✦</i>
-    <span>Smashed to order</span><i>✦</i><span>Hand-cut fries</span><i>✦</i><span>Thick shakes</span><i>✦</i><span>Open till 1 AM</span><i>✦</i>
-  </div>
-</div>
-
-<!-- ============ MENU ============ -->
-<section class="menu" id="menu">
-  <div class="menu__head">
-    <h2 class="display reveal-lines"><span class="line"><span>SAME SMASH AT NOON</span></span><span class="line"><span>AND AT MIDNIGHT.</span></span></h2>
-    <p class="menu__note">Everything is cooked to order. Patties are 100% chuck and brisket, ground in-house every morning. Veg patty on request.</p>
-  </div>
-  <div class="signatures" id="signatures"></div>
-  <div class="menu__tabs" role="tablist" aria-label="Menu categories">
-    <button role="tab" class="is-active" data-tab="burgers" aria-selected="true">Burgers</button>
-    <button role="tab" data-tab="fries" aria-selected="false">Fries &amp; Sides</button>
-    <button role="tab" data-tab="shakes" aria-selected="false">Shakes &amp; Drinks</button>
-    <i class="menu__tabs-ink"></i>
-  </div>
-  <div class="board" id="board"></div>
-  <a href="#visit" class="pill pill--dark">See the full board <span>↗</span></a>
-  <div class="hover-peek" id="peek" aria-hidden="true"><img alt=""></div>
-</section>
-
-<!-- ============ SEAR ============ -->
-<section class="sear" id="sear">
-  <div class="sear__stage">
-    <div class="sear__media">
-      <video id="searVideo" muted loop playsinline preload="none" poster="assets/img/sear.webp" aria-label="Cheddar melting over a smashed patty">
-        <source src="assets/video/sear.mp4" type="video/mp4">
-      </video>
-    </div>
-    <article class="sear__card">
-      <p class="tag tag--dark">Burgers · House smash</p>
-      <h2 class="display reveal-lines"><span class="line"><span>SLOW SEAR.</span></span><span class="line"><span>LOUD CITY.</span></span></h2>
-      <p>Beef ground the moment the doors open, rolled, then smashed thin on a 250°C griddle until the edges go lacy and crisp. Cheddar on, dome down, ninety seconds — made the patient way, a block from the noise.</p>
-      <ul class="sear__stats">
-        <li><b data-count="120">0</b><small>g</small><span>Per patty</span></li>
-        <li><b data-count="90">0</b><small>s</small><span>On the iron</span></li>
-        <li><b>11:00</b><span>First press, every day</span></li>
-      </ul>
-    </article>
-  </div>
-</section>
-
-<!-- ============ BUILD ============ -->
-<section class="build" id="build" aria-label="How an American burger is made">
+<div class="film__build" id="build" aria-label="How an American burger is made">
   <div class="build__stage">
     <div class="build__copy">
       <p class="eyebrow">Start to finish · The American burger</p>
@@ -270,6 +186,89 @@
         <g id="served" opacity="0"><rect x="226" y="520" width="148" height="30" rx="15" fill="#dc143c"/><text x="300" y="540" fill="#fff" font-family="Inter,sans-serif" font-size="13" font-weight="700" letter-spacing="3" text-anchor="middle">SERVED HOT</text></g>
       </svg>
     </div>
+  </div>
+</div>
+
+    <ol class="film__chapters" aria-hidden="true">
+      <li>Rooftops</li><li>Mercer Lane</li><li>The door</li><li>The griddle</li><li>The burger</li><li>The build</li>
+      <i class="film__progress"><b id="filmProgress"></b></i>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="about__head">
+    <p class="eyebrow">Ember &amp; Bun · Est. 2019</p>
+    <h2 class="display display--shadow reveal-lines"><span class="line"><span>A CORNER,</span></span><span class="line"><span>NOT A CHAIN.</span></span></h2>
+    <div class="about__side">
+      <h3 class="serif">Slow food, fast city.</h3>
+      <p>A corner room on Mercer Lane with tall windows, an open griddle and a fryer that only drops when you order. Beef ground every morning, potatoes cut by hand, sauces made in-house. Stay for one burger or the whole afternoon.</p>
+    </div>
+  </div>
+
+  <div class="collage">
+    <figure class="collage__item c1" data-speed="-0.12"><img src="assets/img/interior.webp" alt="Sunlit dining room with walnut tables and brass lamps" loading="lazy" decoding="async" width="1400" height="788"></figure>
+    <figure class="collage__item c2" data-speed="0.10"><img src="assets/img/g1.webp" alt="Chef forming fresh beef balls in the morning" loading="lazy" decoding="async" width="900" height="1125"></figure>
+    <figure class="collage__item c3" data-speed="-0.06"><img src="assets/img/detail.webp" alt="House sauces, fries and a burger on the marble counter" loading="lazy" decoding="async" width="1100" height="733"></figure>
+    <figure class="collage__item c4" data-speed="0.16"><img src="assets/img/smash.webp" alt="Patty being smashed on the griddle" loading="lazy" decoding="async" width="1200" height="675"></figure>
+    <svg class="doodle" viewBox="0 0 240 220" aria-hidden="true">
+      <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M28 96c0-44 40-70 92-70s92 26 92 70z"/>
+        <path d="M70 52l6-4M110 42l7 1M150 48l6 4M92 66l6-3M136 64l6 2"/>
+        <path d="M22 112c18 10 34-6 50 4s30-6 48 2 30-8 48 0 30-6 50 2"/>
+        <path d="M24 122h192c6 0 10 6 6 12-4 8-14 10-22 10H40c-8 0-18-2-22-10-4-6 0-12 6-12z"/>
+        <path d="M30 152c40 8 140 8 180 0"/>
+        <path d="M30 160h180c0 22-30 36-90 36s-90-14-90-36z"/>
+        <path d="M100 18c-6-8 4-12-2-20M124 16c-6-8 4-12-2-20M148 20c-6-8 4-12-2-20"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track" data-marquee>
+    <span>Smashed to order</span><i>✦</i><span>Hand-cut fries</span><i>✦</i><span>Thick shakes</span><i>✦</i><span>Open till 1 AM</span><i>✦</i>
+    <span>Smashed to order</span><i>✦</i><span>Hand-cut fries</span><i>✦</i><span>Thick shakes</span><i>✦</i><span>Open till 1 AM</span><i>✦</i>
+  </div>
+</div>
+
+<!-- ============ MENU ============ -->
+<section class="menu" id="menu">
+  <div class="menu__head">
+    <h2 class="display reveal-lines"><span class="line"><span>SAME SMASH AT NOON</span></span><span class="line"><span>AND AT MIDNIGHT.</span></span></h2>
+    <p class="menu__note">Everything is cooked to order. Patties are 100% chuck and brisket, ground in-house every morning. Veg patty on request.</p>
+  </div>
+  <div class="signatures" id="signatures"></div>
+  <div class="menu__tabs" role="tablist" aria-label="Menu categories">
+    <button role="tab" class="is-active" data-tab="burgers" aria-selected="true">Burgers</button>
+    <button role="tab" data-tab="fries" aria-selected="false">Fries &amp; Sides</button>
+    <button role="tab" data-tab="shakes" aria-selected="false">Shakes &amp; Drinks</button>
+    <i class="menu__tabs-ink"></i>
+  </div>
+  <div class="board" id="board"></div>
+  <a href="#visit" class="pill pill--dark">See the full board <span>↗</span></a>
+  <div class="hover-peek" id="peek" aria-hidden="true"><img alt=""></div>
+</section>
+
+<!-- ============ SEAR ============ -->
+<section class="sear" id="sear">
+  <div class="sear__stage">
+    <div class="sear__media">
+      <video id="searVideo" muted loop playsinline preload="none" poster="assets/img/sear.webp" aria-label="Cheddar melting over a smashed patty">
+        <source src="assets/video/sear.mp4" type="video/mp4">
+      </video>
+    </div>
+    <article class="sear__card">
+      <p class="tag tag--dark">Burgers · House smash</p>
+      <h2 class="display reveal-lines"><span class="line"><span>SLOW SEAR.</span></span><span class="line"><span>LOUD CITY.</span></span></h2>
+      <p>Beef ground the moment the doors open, rolled, then smashed thin on a 250°C griddle until the edges go lacy and crisp. Cheddar on, dome down, ninety seconds — made the patient way, a block from the noise.</p>
+      <ul class="sear__stats">
+        <li><b data-count="120">0</b><small>g</small><span>Per patty</span></li>
+        <li><b data-count="90">0</b><small>s</small><span>On the iron</span></li>
+        <li><b>11:00</b><span>First press, every day</span></li>
+      </ul>
+    </article>
   </div>
 </section>
 
