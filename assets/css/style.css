@@ -59,7 +59,7 @@ h1,h2,h3,h4,p{margin:0}
 .mnav p{margin-top:28px;opacity:.7;font-size:14px}
 
 /* film */
-.film{position:relative;height:1500vh;background:#120808}
+.film{position:relative;height:900vh;background:#120808}
 .film__stage{position:sticky;top:0;height:100vh;height:100svh;overflow:clip;color:var(--cream)}
 .film__canvas{position:absolute;inset:0;width:100%;height:100%}
 .film__scrim{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(18,8,8,.45) 0%,rgba(18,8,8,0) 22%,rgba(18,8,8,0) 55%,rgba(18,8,8,.55) 100%),radial-gradient(120% 90% at 50% 50%,transparent 55%,rgba(18,8,8,.35) 100%)}
@@ -242,7 +242,7 @@ h1,h2,h3,h4,p{margin:0}
   .film__chapters{display:none}
 }
 @media (max-width:768px){
-  .film{height:1260vh}
+  .film{height:760vh}
   .beat--intro{max-width:none;right:var(--gut);bottom:15vh}
   .intro__title{font-size:clamp(56px,17vw,120px);white-space:normal}
   .beat--card{display:none}
@@ -276,9 +276,8 @@ h1,h2,h3,h4,p{margin:0}
 }
 
 /* build — how an American burger is made */
-.film__tint{position:absolute;inset:0;pointer-events:none;background:#dc143c;mix-blend-mode:soft-light;opacity:.9}
-.film__build{position:absolute;inset:0;background:var(--ox);color:var(--cream);opacity:0;visibility:hidden}
-.build__stage{position:absolute;inset:0;display:grid;grid-template-columns:minmax(320px,.9fr) 1.1fr;align-items:center;gap:var(--gut);padding:80px var(--gut) 40px}
+.build{position:relative;height:850vh;background:var(--ox);color:var(--cream)}
+.build__stage{position:sticky;top:0;height:100vh;height:100svh;overflow:clip;display:grid;grid-template-columns:minmax(320px,.9fr) 1.1fr;align-items:center;gap:var(--gut);padding:80px var(--gut) 40px}
 .build__copy{position:relative}
 .build__copy .eyebrow{color:var(--mustard)}
 .build__copy .display{color:var(--cream);font-size:clamp(44px,6vw,96px);margin:12px 0 20px}
@@ -296,6 +295,7 @@ h1,h2,h3,h4,p{margin:0}
 .build__art{align-self:stretch;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 55%,rgba(255,255,255,.1),rgba(0,0,0,.18));border-radius:10px;min-height:0}
 .build__art svg{width:100%;height:100%;max-height:calc(100svh - 130px)}
 @media (max-width:768px){
+  .build{height:800vh}
   .build__stage{grid-template-columns:1fr;grid-template-rows:1fr auto;padding:70px var(--gut) 20px;gap:12px;align-items:stretch}
   .build__art{grid-row:1}
   .build__copy{grid-row:2}
