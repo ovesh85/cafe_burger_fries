@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ember &amp; Bun — Smash burgers & hand-cut fries on the corner</title>
+<meta name="description" content="Ember & Bun is a corner burger café. Smashed to order on a 250°C griddle, hand-cut fries, thick shakes. Come early, stay late.">
+<meta name="theme-color" content="#5e0c18">
+<meta property="og:title" content="Ember & Bun — Smash burgers on the corner">
+<meta property="og:description" content="Smashed the moment you order. Come early, stay late.">
+<meta property="og:image" content="assets/img/og.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%235e0c18'/%3E%3Ctext x='32' y='44' font-family='Georgia' font-size='30' fill='%23f6efe4' text-anchor='middle'%3E%26amp;%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/seq/hero/d/0001.webp" media="(min-width: 769px)">
+<link rel="preload" as="image" href="assets/seq/hero/m/0001.webp" media="(max-width: 768px)">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="is-loading">
+
+<!-- PRELOADER -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__mark">
+    <span class="loader__word" data-split-chars>EMBER</span>
+    <span class="loader__amp">&amp;</span>
+    <span class="loader__word" data-split-chars>BUN</span>
+  </div>
+  <div class="loader__foot">
+    <span>Firing up the griddle</span>
+    <span class="loader__count"><b id="loaderCount">0</b>%</span>
+  </div>
+  <div class="loader__bar"><i id="loaderBar"></i></div>
+</div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <a href="#top" class="nav__logo" aria-label="Ember & Bun home">EMBER <em>&amp;</em> BUN</a>
+  <nav class="nav__links" aria-label="Primary">
+    <a href="#menu">Menu</a>
+    <a href="#about">About</a>
+    <a href="#sear">The Sear</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <button class="nav__order" id="orderBtn" aria-label="Your order">
+    <span>Order</span><b class="nav__count" id="cartCount">0</b>
+  </button>
+  <button class="nav__burger" id="menuToggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
+</header>
+
+<div class="mnav" id="mnav" aria-hidden="true">
+  <a href="#menu">Menu</a><a href="#about">About</a><a href="#sear">The Sear</a><a href="#visit">Visit</a>
+  <p>214 Mercer Lane · New York<br>Open daily 11 AM – 1 AM</p>
+</div>
+
+<main id="top">
+
+<!-- ============ HERO FILM ============ -->
+<section class="film" id="film" aria-label="A walk to Ember & Bun">
+  <div class="film__stage">
+    <canvas class="film__canvas" id="filmCanvas" aria-hidden="true"></canvas>
+    <div class="film__scrim"></div>
+
+    <div class="beat beat--intro" data-beat="0">
+      <p class="intro__hello" data-split-words>Good morning,</p>
+      <h1 class="intro__title"><span class="line"><span>EMBER &amp; BUN</span></span></h1>
+      <p class="intro__copy" data-split-words>Burgers from open to close, smashed the moment you order, on a corner in New York. Come early, stay late.</p>
+    </div>
+    <aside class="beat beat--card" data-beat="0">
+      <span class="tag">On the griddle</span>
+      <h3>The House Smash</h3>
+      <p>Two thin patties, aged cheddar, pickles and house sauce on a toasted brioche. <b>$14</b></p>
+    </aside>
+    <div class="beat beat--ticker" data-beat="0">
+      <span>New York, N.Y.</span><span>Open daily 11 AM – 1 AM</span><span>Smashed to order</span><span class="scroll-cue">Scroll <i></i></span>
+    </div>
+
+    <h2 class="beat beat--big beat--l" data-beat="1"><span class="line"><span>THE CITY NEVER ASKS</span></span><span class="line"><span>WHAT YOU'RE CRAVING.</span></span></h2>
+    <h2 class="beat beat--big beat--r beat--huge" data-beat="2"><span class="line"><span>SO WE DO.</span></span></h2>
+    <h2 class="beat beat--big beat--l beat--low" data-beat="3"><span class="line"><span>TAKE THE WINDOW SEAT.</span></span><span class="line"><span>STAY TILL THE FRIES</span></span><span class="line"><span>ARE GONE.</span></span></h2>
+    <div class="beat beat--smash" data-beat="4">
+      <h2 class="beat--big"><span class="line"><span>SMASHED THE</span></span><span class="line"><span>MOMENT YOU ORDER.</span></span></h2>
+      <ul class="stats">
+        <li><b data-count="250">0</b><small>°C</small><span>Griddle</span></li>
+        <li><b data-count="10">0</b><small>s</small><span>Press</span></li>
+        <li><b data-count="90">0</b><small>s</small><span>Sear</span></li>
+      </ul>
+    </div>
+    <h2 class="beat beat--big beat--c" data-beat="5"><span class="line"><span>THIS IS THE PART</span></span><span class="line"><span>WE DON'T RUSH.</span></span></h2>
+
+    <ol class="film__chapters" aria-hidden="true">
+      <li>Rooftops</li><li>Mercer Lane</li><li>The door</li><li>The griddle</li><li>The burger</li>
+      <i class="film__progress"><b id="filmProgress"></b></i>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="about__head">
+    <p class="eyebrow">Ember &amp; Bun · Est. 2019</p>
+    <h2 class="display display--shadow reveal-lines"><span class="line"><span>A CORNER,</span></span><span class="line"><span>NOT A CHAIN.</span></span></h2>
+    <div class="about__side">
+      <h3 class="serif">Slow food, fast city.</h3>
+      <p>A corner room on Mercer Lane with tall windows, an open griddle and a fryer that only drops when you order. Beef ground every morning, potatoes cut by hand, sauces made in-house. Stay for one burger or the whole afternoon.</p>
+    </div>
+  </div>
+
+  <div class="collage">
+    <figure class="collage__item c1" data-speed="-0.12"><img src="assets/img/interior.webp" alt="Sunlit dining room with walnut tables and brass lamps" loading="lazy" decoding="async" width="1400" height="788"></figure>
+    <figure class="collage__item c2" data-speed="0.10"><img src="assets/img/g1.webp" alt="Chef forming fresh beef balls in the morning" loading="lazy" decoding="async" width="900" height="1125"></figure>
+    <figure class="collage__item c3" data-speed="-0.06"><img src="assets/img/detail.webp" alt="House sauces, fries and a burger on the marble counter" loading="lazy" decoding="async" width="1100" height="733"></figure>
+    <figure class="collage__item c4" data-speed="0.16"><img src="assets/img/smash.webp" alt="Patty being smashed on the griddle" loading="lazy" decoding="async" width="1200" height="675"></figure>
+    <svg class="doodle" viewBox="0 0 240 220" aria-hidden="true">
+      <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M28 96c0-44 40-70 92-70s92 26 92 70z"/>
+        <path d="M70 52l6-4M110 42l7 1M150 48l6 4M92 66l6-3M136 64l6 2"/>
+        <path d="M22 112c18 10 34-6 50 4s30-6 48 2 30-8 48 0 30-6 50 2"/>
+        <path d="M24 122h192c6 0 10 6 6 12-4 8-14 10-22 10H40c-8 0-18-2-22-10-4-6 0-12 6-12z"/>
+        <path d="M30 152c40 8 140 8 180 0"/>
+        <path d="M30 160h180c0 22-30 36-90 36s-90-14-90-36z"/>
+        <path d="M100 18c-6-8 4-12-2-20M124 16c-6-8 4-12-2-20M148 20c-6-8 4-12-2-20"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track" data-marquee>
+    <span>Smashed to order</span><i>✦</i><span>Hand-cut fries</span><i>✦</i><span>Thick shakes</span><i>✦</i><span>Open till 1 AM</span><i>✦</i>
+    <span>Smashed to order</span><i>✦</i><span>Hand-cut fries</span><i>✦</i><span>Thick shakes</span><i>✦</i><span>Open till 1 AM</span><i>✦</i>
+  </div>
+</div>
+
+<!-- ============ MENU ============ -->
+<section class="menu" id="menu">
+  <div class="menu__head">
+    <h2 class="display reveal-lines"><span class="line"><span>SAME SMASH AT NOON</span></span><span class="line"><span>AND AT MIDNIGHT.</span></span></h2>
+    <p class="menu__note">Everything is cooked to order. Patties are 100% chuck and brisket, ground in-house every morning. Veg patty on request.</p>
+  </div>
+  <div class="signatures" id="signatures"></div>
+  <div class="menu__tabs" role="tablist" aria-label="Menu categories">
+    <button role="tab" class="is-active" data-tab="burgers" aria-selected="true">Burgers</button>
+    <button role="tab" data-tab="fries" aria-selected="false">Fries &amp; Sides</button>
+    <button role="tab" data-tab="shakes" aria-selected="false">Shakes &amp; Drinks</button>
+    <i class="menu__tabs-ink"></i>
+  </div>
+  <div class="board" id="board"></div>
+  <a href="#visit" class="pill pill--dark">See the full board <span>↗</span></a>
+  <div class="hover-peek" id="peek" aria-hidden="true"><img alt=""></div>
+</section>
+
+<!-- ============ SEAR ============ -->
+<section class="sear" id="sear">
+  <div class="sear__stage">
+    <div class="sear__media">
+      <video id="searVideo" muted loop playsinline preload="none" poster="assets/img/sear.webp" aria-label="Cheddar melting over a smashed patty">
+        <source src="assets/video/sear.mp4" type="video/mp4">
+      </video>
+    </div>
+    <article class="sear__card">
+      <p class="tag tag--dark">Burgers · House smash</p>
+      <h2 class="display reveal-lines"><span class="line"><span>SLOW SEAR.</span></span><span class="line"><span>LOUD CITY.</span></span></h2>
+      <p>Beef ground the moment the doors open, rolled, then smashed thin on a 250°C griddle until the edges go lacy and crisp. Cheddar on, dome down, ninety seconds — made the patient way, a block from the noise.</p>
+      <ul class="sear__stats">
+        <li><b data-count="120">0</b><small>g</small><span>Per patty</span></li>
+        <li><b data-count="90">0</b><small>s</small><span>On the iron</span></li>
+        <li><b>11:00</b><span>First press, every day</span></li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="day" id="day">
+  <div class="day__pin">
+    <div class="day__head">
+      <h2 class="display reveal-lines"><span class="line"><span>IT'S 4 PM. HAVE</span></span><span class="line"><span>THE FRIES.</span></span></h2>
+      <p>A day on the corner, from the first press to the last order.</p>
+    </div>
+    <div class="day__track" id="dayTrack">
+      <figure class="shot s1"><img src="assets/img/g1.webp" alt="" loading="lazy" decoding="async"><figcaption><b>11:00</b> First press</figcaption></figure>
+      <figure class="shot s2"><img src="assets/img/g2.webp" alt="" loading="lazy" decoding="async"><figcaption><b>12:30</b> Lunch rush</figcaption></figure>
+      <figure class="shot s3"><img src="assets/img/g3.webp" alt="" loading="lazy" decoding="async"><figcaption><b>16:00</b> Fries &amp; a shake</figcaption></figure>
+      <figure class="shot s4"><img src="assets/img/window.webp" alt="" loading="lazy" decoding="async"><figcaption><b>17:45</b> Window seat</figcaption></figure>
+      <figure class="shot s5"><img src="assets/img/fries.webp" alt="" loading="lazy" decoding="async"><figcaption><b>19:10</b> Second drop</figcaption></figure>
+      <figure class="shot s6"><img src="assets/img/g4.webp" alt="" loading="lazy" decoding="async"><figcaption><b>21:30</b> The banquette</figcaption></figure>
+      <figure class="shot s7"><img src="assets/img/g5.webp" alt="" loading="lazy" decoding="async"><figcaption><b>00:40</b> Last order</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISIT ============ -->
+<section class="visit" id="visit">
+  <div class="visit__grid">
+    <div class="visit__info">
+      <p class="eyebrow">Visit</p>
+      <h2 class="display reveal-lines"><span class="line"><span>COME EARLY.</span></span><span class="line"><span>STAY LATE.</span></span></h2>
+      <div class="visit__cols">
+        <div><h4>Address</h4><p>214 Mercer Lane<br>New York, NY 10012</p></div>
+        <div><h4>Hours</h4><p>Mon – Thu, 11 AM – 12 AM<br>Fri – Sun, 11 AM – 1 AM</p></div>
+        <div><h4>Say hi</h4><p><a href="mailto:hello@emberandbun.com">hello@emberandbun.com</a><br>(212) 555-0142</p></div>
+      </div>
+      <form class="book" id="bookForm">
+        <label><span>Date</span><input type="date" name="date" required></label>
+        <label><span>Time</span><select name="time"><option>12:00</option><option>13:30</option><option>18:00</option><option selected>19:30</option><option>21:00</option></select></label>
+        <label><span>Guests</span><select name="guests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5+</option></select></label>
+        <button class="pill pill--dark" type="submit">Book a table <span>↗</span></button>
+      </form>
+      <a class="pill pill--line" href="https://maps.google.com/?q=Mercer+Lane+New+York" target="_blank" rel="noopener">Get directions <span>↗</span></a>
+    </div>
+    <div class="visit__media">
+      <figure class="tape" data-speed="-0.08"><img src="assets/img/facade.webp" alt="The oxblood Ember & Bun facade on Mercer Lane" loading="lazy" decoding="async"></figure>
+      <figure class="tape tape--small" data-speed="0.12"><img src="assets/img/window.webp" alt="" loading="lazy" decoding="async"></figure>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__top">
+    <p class="foot__lead serif">Doors open at eleven.</p>
+    <div class="foot__cols">
+      <div><h4>Explore</h4><a href="#menu">Menu</a><a href="#about">About</a><a href="#visit">Visit</a></div>
+      <div><h4>Say hi</h4><a href="mailto:hello@emberandbun.com">hello@emberandbun.com</a><a href="#top" data-top>Back to the top ↑</a></div>
+    </div>
+  </div>
+  <div class="foot__word" aria-label="Ember & Bun"><span data-split-chars>EMBER&nbsp;&amp;&nbsp;BUN</span></div>
+  <div class="foot__base">
+    <span>© 2026 Ember &amp; Bun. Smash burgers on the corner.</span>
+    <span>New York, N.Y. · Open daily</span>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="assets/vendor/lenis.min.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>
