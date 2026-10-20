@@ -8,7 +8,7 @@ Structure
   assets/css/style.css       design tokens at the top (:root colours, fonts)
   assets/js/app.js           SIGNATURES + MENU data at the top; all animation logic below
   assets/vendor/             GSAP 3.12.5, ScrollTrigger, Lenis 1.1.13 (self-hosted, no CDN)
-  assets/seq/hero/d|m/       311-frame WebP scroll film (desktop 1920w / mobile 720x1080 portrait crop), motion-equalised
+  assets/seq/hero/d|m/       498-frame WebP scroll film (desktop 1920w / mobile 720x1080 portrait crop): original 311 frames + two AI clips spliced in (burger assembly after the griddle, packing into the crimson box at the end)
   assets/video/sear.mp4      seamless loop for the "Slow sear" section (900w, 1.5 MB)
   assets/img, assets/menu    WebP photos and transparent burger cut-outs
 
@@ -24,7 +24,7 @@ Performance
     ~44 off-thread-decoded ImageBitmaps around the playhead (direction-aware prefetch), no ghost blending
   - Frames re-timed by measured optical motion so camera speed stays constant across the 5 AI clips
   - Separate portrait frames for phones; lazy images; video preload=none & plays only in view
-  - Total weight ~46 MB (desktop film 33 MB, mobile film 12 MB; each device loads only its own), first paint ~4 MB; prefers-reduced-motion respected
+  - Total weight ~70 MB (desktop film 50 MB, mobile film 19 MB; each device loads only its own), first paint ~4 MB; prefers-reduced-motion respected
 
 WooCommerce port
   - Page template + enqueue style.css/app.js; assets in theme

@@ -40,7 +40,6 @@
     <a href="#menu">Menu</a>
     <a href="#about">About</a>
     <a href="#sear">The Sear</a>
-    <a href="#build">The Build</a>
     <a href="#visit">Visit</a>
   </nav>
   <button class="nav__order" id="orderBtn" aria-label="Your order">
@@ -50,7 +49,7 @@
 </header>
 
 <div class="mnav" id="mnav" aria-hidden="true">
-  <a href="#menu">Menu</a><a href="#about">About</a><a href="#sear">The Sear</a><a href="#build">The Build</a><a href="#visit">Visit</a>
+  <a href="#menu">Menu</a><a href="#about">About</a><a href="#sear">The Sear</a><a href="#visit">Visit</a>
   <p>214 Mercer Lane · New York<br>Open daily 11 AM – 1 AM</p>
 </div>
 
@@ -89,8 +88,10 @@
     </div>
     <h2 class="beat beat--big beat--c" data-beat="5"><span class="line"><span>THIS IS THE PART</span></span><span class="line"><span>WE DON'T RUSH.</span></span></h2>
 
+    <h2 class="beat beat--big beat--l beat--low" data-beat="6"><span class="line"><span>BOXED. SEALED.</span></span><span class="line"><span>READY TO GO.</span></span></h2>
+
     <ol class="film__chapters" aria-hidden="true">
-      <li>Rooftops</li><li>Mercer Lane</li><li>The door</li><li>The griddle</li><li>The burger</li>
+      <li>Rooftops</li><li>Mercer Lane</li><li>The door</li><li>The griddle</li><li>The burger</li><li>The box</li>
       <i class="film__progress"><b id="filmProgress"></b></i>
     </ol>
   </div>
@@ -169,107 +170,6 @@
         <li><b>11:00</b><span>First press, every day</span></li>
       </ul>
     </article>
-  </div>
-</section>
-
-<!-- ============ BUILD ============ -->
-<section class="build" id="build" aria-label="How an American burger is made">
-  <div class="build__stage">
-    <div class="build__copy">
-      <p class="eyebrow">Start to finish · The American burger</p>
-      <h2 class="display">HOW IT'S<br>MADE.</h2>
-      <ol class="steps" id="buildSteps">
-        <li class="part">Part one · The patty</li>
-        <li><b>01</b><h3>Grind</h3><p>Chuck and brisket, 80/20, ground in-house every morning. Never frozen, barely touched.</p></li>
-        <li><b>02</b><h3>Roll</h3><p>Portioned to 120 g and rolled into a loose ball. Cold hands, no packing.</p></li>
-        <li><b>03</b><h3>Smash</h3><p>Pressed flat with the spatula for ten seconds on a 250°C griddle. Thin, wide, craggy.</p></li>
-        <li><b>04</b><h3>Sear &amp; flip</h3><p>Ninety seconds until the edges go lacy and crisp, then one flip. Salt, pepper, nothing else.</p></li>
-        <li><b>05</b><h3>Melt</h3><p>Aged cheddar goes on the moment the patty turns, and melts into every crevice.</p></li>
-        <li class="part">Part two · The stack</li>
-        <li><b>06</b><h3>Toast &amp; sauce</h3><p>Brioche bun toasted in beef fat, bottom half painted with house sauce.</p></li>
-        <li><b>07</b><h3>Crunch</h3><p>Cold crisp lettuce and dill pickles go on first, so the bun stays dry.</p></li>
-        <li><b>08</b><h3>The patty</h3><p>Straight off the iron onto the pickles, cheese still running.</p></li>
-        <li><b>09</b><h3>Onion &amp; tomato</h3><p>Shaved red onion and a thick slice of ripe tomato.</p></li>
-        <li><b>10</b><h3>Crown</h3><p>The sesame-seeded top bun lands, and the burger is closed.</p></li>
-        <li><b>11</b><h3>Served</h3><p>To the table in under four minutes. Fries on the side.</p></li>
-      </ol>
-      <i class="build__bar"><b id="buildBar"></b></i>
-    </div>
-    <div class="build__art">
-      <svg viewBox="50 250 500 320" id="buildSvg" role="img" aria-label="Illustrated steps: grind beef, roll, smash, sear, melt cheese, then stack bun, sauce, lettuce, pickles, patty, onion, tomato and top bun.">
-        <defs>
-          <linearGradient id="gBun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0b560"/><stop offset="1" stop-color="#c9822c"/></linearGradient>
-          <linearGradient id="gBunB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e5a24a"/><stop offset="1" stop-color="#bd7524"/></linearGradient>
-          <radialGradient id="gGlow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ff7a3a" stop-opacity=".75"/><stop offset="1" stop-color="#ff7a3a" stop-opacity="0"/></radialGradient>
-          <g id="pCooked">
-            <rect x="185" y="398" width="230" height="26" rx="13" fill="#4a2418"/>
-            <path d="M190 404q-8 6 0 12M410 404q8 6 0 12" stroke="#2a120b" stroke-width="5" stroke-linecap="round" fill="none"/>
-            <g fill="#2a120b" opacity=".7"><ellipse cx="225" cy="410" rx="7" ry="3"/><ellipse cx="270" cy="414" rx="9" ry="3"/><ellipse cx="318" cy="408" rx="8" ry="3"/><ellipse cx="365" cy="413" rx="7" ry="3"/></g>
-            <path d="M200 402h200" stroke="#7a4228" stroke-width="3" stroke-linecap="round" opacity=".8"/>
-          </g>
-          <g id="pCheese"><path d="M180 392H420L428 402 414 402 408 420 398 402H336L328 430 318 402H206L198 414 192 402 180 402Z" fill="#f6b81c" stroke="#d99410" stroke-width="2" stroke-linejoin="round"/></g>
-        </defs>
-
-        <ellipse cx="300" cy="488" rx="200" ry="16" fill="#fff5ea" opacity="0" id="plate"/>
-        <ellipse cx="300" cy="497" rx="190" ry="8" fill="#3a0510" opacity="0" id="plateShadow"/>
-
-        <!-- Part one: griddle -->
-        <g id="sceneA">
-          <rect x="70" y="456" width="460" height="46" rx="8" fill="#2b2226"/>
-          <rect x="70" y="456" width="460" height="5" rx="2" fill="#4a3d42"/>
-          <ellipse id="glow" cx="300" cy="458" rx="170" ry="26" fill="url(#gGlow)" opacity="0"/>
-
-          <g id="chunks">
-            <g transform="translate(224 300)"><rect width="52" height="34" rx="9" fill="#c4524f"/><path d="M8 10h30M10 22h24" stroke="#f1b7b0" stroke-width="3" stroke-linecap="round"/></g>
-            <g transform="translate(318 270)"><rect width="46" height="40" rx="10" fill="#a83c3c"/><path d="M8 12h28M10 26h22" stroke="#e79a96" stroke-width="3" stroke-linecap="round"/></g>
-            <text x="250" y="352" fill="#f6efe4" font-family="Inter,sans-serif" font-size="11" font-weight="600" letter-spacing="2" text-anchor="middle">CHUCK</text>
-            <text x="341" y="326" fill="#f6efe4" font-family="Inter,sans-serif" font-size="11" font-weight="600" letter-spacing="2" text-anchor="middle">BRISKET</text>
-          </g>
-
-          <g id="mince">
-            <g fill="none" stroke="#c4524f" stroke-width="5" stroke-linecap="round">
-              <path d="M254 454q8-10 16 0t16 0t16 0t16 0t16 0t16 0"/>
-              <path d="M262 442q8-10 16 0t16 0t16 0t16 0t16 0"/>
-              <path d="M272 430q8-10 16 0t16 0t16 0t16 0"/>
-              <path d="M284 418q8-10 16 0t16 0t16 0"/>
-              <path d="M292 408q8-10 16 0t16 0"/>
-            </g>
-            <g fill="none" stroke="#e79a96" stroke-width="2.5" stroke-linecap="round" opacity=".8"><path d="M262 448q8-8 16 0t16 0M282 424q8-8 16 0t16 0M296 412q6-6 12 0"/></g>
-          </g>
-
-          <g id="ball"><circle cx="300" cy="432" r="26" fill="#c4524f"/><path d="M284 424q10-8 20-2M290 440q10 6 22-2" stroke="#e79a96" stroke-width="3" fill="none" stroke-linecap="round"/><ellipse cx="292" cy="422" rx="8" ry="5" fill="#fff" opacity=".18"/></g>
-
-          <g id="pattyA"><g transform="translate(0 34)">
-            <g id="pRaw"><rect x="185" y="398" width="230" height="26" rx="13" fill="#c4524f"/><path d="M205 408h30M255 414h40M320 408h36M370 414h24" stroke="#e79a96" stroke-width="3" stroke-linecap="round"/></g>
-            <g id="pDone" opacity="0"><use href="#pCooked"/></g>
-            <g id="pCheeseA" opacity="0"><use href="#pCheese"/></g>
-          </g></g>
-
-          <g id="spatula"><g>
-            <rect x="170" y="392" width="260" height="14" rx="5" fill="#cfd4d8"/><rect x="170" y="392" width="260" height="4" rx="2" fill="#f1f4f6"/>
-            <rect x="292" y="296" width="16" height="96" rx="6" fill="#8a5a3a"/><rect x="286" y="286" width="28" height="18" rx="8" fill="#6b4328"/>
-          </g></g>
-
-          <g id="steam" fill="none" stroke="#f6efe4" stroke-width="4" stroke-linecap="round" opacity="0">
-            <path d="M240 440q-14-22 0-44t0-44"/><path d="M300 436q-14-22 0-44t0-44"/><path d="M360 440q-14-22 0-44t0-44"/>
-          </g>
-        </g>
-
-        <!-- Part two: the stack -->
-        <g id="stack">
-          <g id="bBun"><path d="M190 452Q190 446 205 446H395Q410 446 410 452V462Q410 478 380 478H220Q190 478 190 462Z" fill="url(#gBunB)"/><path d="M200 452H400" stroke="#f3c07a" stroke-width="3" stroke-linecap="round" opacity=".7"/></g>
-          <g id="bSauce"><path d="M196 446q14-10 28 0t28 0t28 0t28 0t28 0t28 0t28 0V452H196Z" fill="#d9482b" stroke="#a93219" stroke-width="2"/></g>
-          <g id="bLettuce"><path d="M180 442q11-18 22 0t22 0t22 0t22 0t22 0t22 0t22 0t22 0t22 0t22 0L404 450H180Z" fill="#8fc23f" stroke="#5f8f23" stroke-width="2"/><path d="M200 440q8-8 14 0M260 440q8-8 14 0M330 440q8-8 14 0" stroke="#c6e68a" stroke-width="2.5" fill="none" stroke-linecap="round"/></g>
-          <g id="bPickles" fill="#7b9d2f" stroke="#4e6a1c" stroke-width="2"><ellipse cx="236" cy="430" rx="30" ry="7"/><ellipse cx="300" cy="432" rx="30" ry="7"/><ellipse cx="364" cy="430" rx="30" ry="7"/></g>
-          <g id="bPatty"><use href="#pCooked"/><use href="#pCheese"/></g>
-          <g id="bOnion" fill="none" stroke="#ead7f0" stroke-width="4" stroke-linecap="round"><ellipse cx="250" cy="386" rx="56" ry="6"/><ellipse cx="340" cy="388" rx="50" ry="5"/><ellipse cx="300" cy="383" rx="30" ry="4" opacity=".7"/></g>
-          <g id="bTomato"><rect x="205" y="372" width="190" height="14" rx="7" fill="#e2342b" stroke="#a81f1a" stroke-width="2"/><g fill="#f6a39a"><ellipse cx="245" cy="379" rx="6" ry="2.5"/><ellipse cx="300" cy="379" rx="6" ry="2.5"/><ellipse cx="355" cy="379" rx="6" ry="2.5"/></g></g>
-          <g id="bTop"><path d="M184 366C184 290 236 262 300 262C364 262 416 290 416 366Q416 376 400 376H200Q184 376 184 366Z" fill="url(#gBun)"/><path d="M214 300q30-26 70-30" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".25" fill="none"/>
-            <g id="seeds" fill="#fff3d6"><ellipse cx="250" cy="300" rx="6" ry="3" transform="rotate(-25 250 300)"/><ellipse cx="290" cy="286" rx="6" ry="3" transform="rotate(10 290 286)"/><ellipse cx="332" cy="298" rx="6" ry="3" transform="rotate(30 332 298)"/><ellipse cx="270" cy="324" rx="6" ry="3" transform="rotate(-10 270 324)"/><ellipse cx="318" cy="330" rx="6" ry="3" transform="rotate(20 318 330)"/><ellipse cx="226" cy="334" rx="6" ry="3" transform="rotate(-35 226 334)"/><ellipse cx="372" cy="336" rx="6" ry="3" transform="rotate(35 372 336)"/><ellipse cx="352" cy="312" rx="6" ry="3" transform="rotate(-5 352 312)"/><ellipse cx="236" cy="316" rx="6" ry="3" transform="rotate(15 236 316)"/></g></g>
-        </g>
-        <g id="served" opacity="0"><rect x="226" y="520" width="148" height="30" rx="15" fill="#dc143c"/><text x="300" y="540" fill="#fff" font-family="Inter,sans-serif" font-size="13" font-weight="700" letter-spacing="3" text-anchor="middle">SERVED HOT</text></g>
-      </svg>
-    </div>
   </div>
 </section>
 
