@@ -413,6 +413,65 @@ function initMotion(){
       scrollTrigger: { trigger: '#sear', start: '40% top' } });
   });
 
+  /* build: how an American burger is made (scrubbed SVG assembly) */
+  {
+    const N = 11, lis = $$('#buildSteps li:not(.part)'), bar = $('#buildBar');
+    gsap.set('#plateShadow', { opacity: 0 });
+    gsap.set(['#chunks', '#mince', '#ball', '#pRaw', '#spatula', '#bBun', '#bSauce', '#bLettuce', '#bPickles', '#bPatty', '#bOnion', '#bTomato', '#bTop', '#seeds ellipse'], { autoAlpha: 0 });
+    const tl = gsap.timeline({ defaults: { ease: 'power2.out' },
+      scrollTrigger: { trigger: '#build', start: 'top top', end: 'bottom bottom', scrub: .6,
+        onUpdate: self => {
+          const k = Math.min(N - 1, Math.floor(self.progress * N));
+          lis.forEach((li, n) => li.classList.toggle('is-on', n === k));
+          bar.style.width = (self.progress * 100) + '%';
+        } } });
+    lis[0].classList.add('is-on');
+    // 01 grind
+    tl.fromTo('#chunks', { y: -140, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .45 }, 0)
+      .to('#chunks', { y: 120, scale: .6, svgOrigin: '300 440', autoAlpha: 0, duration: .4, ease: 'power2.in' }, .5)
+      .fromTo('#mince', { scaleY: 0, svgOrigin: '300 458', autoAlpha: 1 }, { scaleY: 1, duration: .45 }, .55)
+    // 02 roll
+      .to('#mince', { scale: .3, autoAlpha: 0, svgOrigin: '300 458', duration: .5 }, 1.1)
+      .fromTo('#ball', { scale: .3, svgOrigin: '300 458', autoAlpha: 0 }, { scale: 1, autoAlpha: 1, duration: .6 }, 1.2)
+      .to('#ball', { y: -10, yoyo: true, repeat: 1, duration: .2, ease: 'sine.inOut' }, 1.8)
+    // 03 smash
+      .fromTo('#spatula', { y: -160, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .3 }, 2)
+      .to('#spatula', { y: 26, duration: .25, ease: 'power3.in' }, 2.35)
+      .to('#ball', { scaleX: 1.9, scaleY: .5, svgOrigin: '300 458', autoAlpha: 0, duration: .25 }, 2.35)
+      .fromTo('#pRaw', { scaleX: .6, svgOrigin: '300 458', autoAlpha: 0 }, { scaleX: 1, autoAlpha: 1, duration: .25 }, 2.35)
+      .to('#spatula', { y: -170, autoAlpha: 0, duration: .35, ease: 'power2.in' }, 2.7)
+    // 04 sear & flip
+      .to('#glow', { autoAlpha: 1, duration: .3 }, 3)
+      .to('#pDone', { autoAlpha: 1, duration: .55, ease: 'none' }, 3.1)
+      .to('#pattyA', { y: -34, duration: .15, ease: 'power2.out' }, 3.45)
+      .to('#pattyA', { y: 0, duration: .15, ease: 'bounce.out' }, 3.62)
+      .fromTo('#steam', { y: 0, autoAlpha: 0 }, { y: -26, autoAlpha: .7, duration: .6, ease: 'none' }, 3.2)
+    // 05 melt
+      .fromTo('#pCheeseA', { y: -70, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .6, ease: 'bounce.out' }, 4.1)
+      .to('#steam', { autoAlpha: 0, duration: .3 }, 4.7)
+    // 06 toast & sauce
+      .to('#sceneA', { y: 50, autoAlpha: 0, duration: .45, ease: 'power2.in' }, 5)
+      .to('#plate', { autoAlpha: 1, duration: .4 }, 5.2)
+      .to('#plateShadow', { autoAlpha: .35, duration: .4 }, 5.2)
+      .fromTo('#bBun', { y: -260, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .5, ease: 'bounce.out' }, 5.45)
+      .fromTo('#bSauce', { y: -220, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .45, ease: 'power2.out' }, 5.8)
+    // 07 crunch
+      .fromTo('#bLettuce', { y: -260, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .5 }, 6)
+      .fromTo('#bPickles ellipse', { y: -240, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .4, stagger: .12 }, 6.4)
+    // 08 patty
+      .fromTo('#bPatty', { y: -300, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .7, ease: 'bounce.out' }, 7)
+    // 09 onion & tomato
+      .fromTo('#bOnion', { y: -260, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .5 }, 8)
+      .fromTo('#bTomato', { y: -280, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .5 }, 8.35)
+    // 10 crown
+      .fromTo('#bTop', { y: -320, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .7, ease: 'bounce.out' }, 9)
+      .to('#seeds ellipse', { autoAlpha: 1, duration: .2, stagger: .04 }, 9.6)
+    // 11 served
+      .to('#stack', { y: -14, scale: 1.04, svgOrigin: '300 480', duration: .6, ease: 'sine.inOut' }, 10)
+      .to('#served', { autoAlpha: 1, duration: .4 }, 10.3)
+      .to({}, { duration: .01 }, N);
+  }
+
   /* day gallery (horizontal) */
   const dayTrack = $('#dayTrack');
   const dist = () => Math.max(0, dayTrack.scrollWidth - window.innerWidth);
